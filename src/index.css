@@ -1,0 +1,142 @@
+/* === Background + Font Setup === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-image: url("https://thumbs.dreamstime.com/z/weather-forecast-presentation-report-background-beautiful-clouds-aerial-view-aircraft-147712082.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: background-image 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Dynamic Backgrounds === */
+body.sunny {
+  background-image: url("https://tse4.mm.bing.net/th/id/OIP.YJC4h7XOWsMfW8UOuz5P-wHaEK?pid=Api&P=0&h=180");
+}
+body.cloudy {
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.w2jBUfr1NctJDeABwsGqrwHaFj?pid=Api&P=0&h=180");
+}
+body.rainy {
+  background-image: url("https://tse4.mm.bing.net/th/id/OIP.JH56B1LUXPHRr_pGQzOdZgEsDI?pid=Api&P=0&h=180");
+}
+body.snowy {
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.HbTTlcG-xU2QPLCF-nJn9gHaEK?pid=Api&P=0&h=180");
+}
+body.storm {
+  background-image: url("https://tse1.mm.bing.net/th/id/OIP.vxTuEDQfnVfQZkUJBhTbigHaFu?pid=Api&P=0&h=180");
+}
+
+/* === Main Container === */
+.app {
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* === Title === */
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* === Search Bar === */
+.search-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 12px 16px;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #1e40af;
+}
+
+/* === Weather Card === */
+.card {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fefefe;
+  margin: 10px 0;
+}
+
+.condition {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.wind {
+  color: #f0f9ff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.time {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* === Error Box === */
+.error {
+  background: rgba(255, 0, 0, 0.25);
+  color: #ffd4d4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .temp {
+    font-size: 2.5rem;
+  }
+}
